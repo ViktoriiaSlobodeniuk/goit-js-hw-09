@@ -4,7 +4,7 @@ const bodyEl = document.querySelector('body');
 
 startBtn.addEventListener('click', onStart);
 stopBtn.addEventListener('click', onStop);
-
+let switcherId;
 function onStart() {
   switcherId = setInterval(() => {
     bodyEl.style.backgroundColor = getRandomHexColor();
