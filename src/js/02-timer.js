@@ -26,13 +26,8 @@ flatpickr('input#datetime-picker', options);
 
 startBtn.disabled = true;
 
-//
-//
-//
 startBtn.addEventListener('click', onBtnStart);
-//
-//
-//
+
 function onBtnStart() {
   timerId = setInterval(timerUpdate, 1000);
 }
@@ -47,7 +42,6 @@ function chosenDate(selectedDate) {
   startBtn.disabled = false;
 
   timeToEnd = selectedDate - currentDate;
-  console.log('fff', timeToEnd);
 
   renderDate(convertMs(timeToEnd));
 }
@@ -92,8 +86,3 @@ function convertMs(ms) {
 function addLeadingZero(value) {
   return value.toString().padStart(2, '0');
 }
-
-const timer = document.querySelector('.timer');
-const field = document.querySelector('.field');
-const value = document.querySelector('.value');
-const label = document.querySelector('.label');
